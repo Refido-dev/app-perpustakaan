@@ -1,0 +1,38 @@
+// File: routes/web.php
+
+  GET|HEAD        / ....................................................................... routes/web.php:10
+  GET|HEAD        admin/info .............................................................. routes/web.php:21
+  GET|HEAD        books .................................................. books.index › BookController@index
+  POST            books .................................................. books.store › BookController@store
+  GET|HEAD        books/create ......................................... books.create › BookController@create
+  GET|HEAD        books/{book} ............................................. books.show › BookController@show
+  PUT|PATCH       books/{book} ......................................... books.update › BookController@update
+  DELETE          books/{book} ....................................... books.destroy › BookController@destroy
+  GET|HEAD        books/{book}/edit ........................................ books.edit › BookController@edit
+  GET|HEAD        categories .................................... categories.index › CategoryController@index
+  POST            categories .................................... categories.store › CategoryController@store
+  GET|HEAD        categories/create ........................... categories.create › CategoryController@create
+  PUT|PATCH       categories/{category} ....................... categories.update › CategoryController@update
+  DELETE          categories/{category} ..................... categories.destroy › CategoryController@destroy
+  GET|HEAD        categories/{category}/edit ...................... categories.edit › CategoryController@edit
+  GET|HEAD        loans .................................................. loans.index › LoanController@index
+  POST            loans .................................................. loans.store › LoanController@store
+  GET|HEAD        loans/create ......................................... loans.create › LoanController@create
+  PUT             loans/{id}/kembalikan ........................ loans.kembalikan › LoanController@kembalikan
+  GET|HEAD        loans/{loan} ............................................. loans.show › LoanController@show
+  PUT|PATCH       loans/{loan} ......................................... loans.update › LoanController@update
+  DELETE          loans/{loan} ....................................... loans.destroy › LoanController@destroy
+  GET|HEAD        loans/{loan}/edit ........................................ loans.edit › LoanController@edit
+  GET|HEAD        members ............................................ members.index › MemberController@index
+  POST            members ............................................ members.store › MemberController@store
+  GET|HEAD        members/create ................................... members.create › MemberController@create
+  GET|HEAD        members/{member} ..................................... members.show › MemberController@show
+  PUT|PATCH       members/{member} ................................. members.update › MemberController@update
+  DELETE          members/{member} ............................... members.destroy › MemberController@destroy
+  GET|HEAD        members/{member}/edit ................................ members.edit › MemberController@edit
+  GET|HEAD        storage/{path} storage.local › vendor/laravel/framework/src/Illuminate/Filesystem/Filesyst…
+  PUT             storage/{path} storage.local.upload › vendor/laravel/framework/src/Illuminate/Filesystem/F…
+  GET|HEAD        up vendor/laravel/framework/src/Illuminate/Foundation/Configuration/ApplicationBuilder.php…
+
+                                                                                          Showing [33] routes
+
