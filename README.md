@@ -10,4 +10,3 @@ Sistem Perpustakaan Digital Kampus untuk mengelola buku, anggota, dan peminjaman
 5. php artisan serve
 
 ## Model, View, Controller
-(2-3 kalimat pakai kata-kata lu sendiri)
