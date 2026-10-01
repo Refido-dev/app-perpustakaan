@@ -1,3 +1,6 @@
+Sebelumnya mohon maaf dikarenakan sebelumnya ada error pada sistem operasi saya ketika menggunakan linux sebelumnya dan ini beralih ke sistem operasi baru, untuk project yang pada sistem operasi lama ada pada link berikut : https://github.com/Refido-dev/app-perpustakaan-lama-
+
+
 # App Perpustakaan
 
 Sistem Perpustakaan Digital Kampus untuk mengelola buku, anggota, dan peminjaman.
