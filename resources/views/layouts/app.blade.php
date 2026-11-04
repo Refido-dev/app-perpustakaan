@@ -22,6 +22,7 @@
         input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
         .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
         .badge{padding:2px 8px;border-radius:4px;color:#fff;font-size:13px}.badge-success{background:#16a34a}.badge-warning{background:#f59e0b}.badge-danger{background:#dc2626}
+    nav .navbar-user{display:flex;align-items:center;gap:12px;color:#cbd5e1;font-size:14px}nav .btn-logout{background:none;border:1px solid #cbd5e1;color:#cbd5e1;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:14px}nav .btn-logout:hover{background:#1e40af;color:#fff}
 </style>
 </head>
 <body>
