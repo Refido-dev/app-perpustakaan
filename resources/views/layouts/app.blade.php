@@ -21,7 +21,8 @@
         label { display: block; margin-top: 12px; font-weight: bold; }
         input, select, textarea { width: 100%; padding: 6px; margin-top: 4px; box-sizing: border-box; }
         .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
-    </style>
+        .badge{padding:2px 8px;border-radius:4px;color:#fff;font-size:13px}.badge-success{background:#16a34a}.badge-warning{background:#f59e0b}.badge-danger{background:#dc2626}
+</style>
 </head>
 <body>
     @include('partials.navbar')

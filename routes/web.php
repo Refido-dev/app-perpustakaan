@@ -22,3 +22,5 @@ Route::put('/loans/{id}/kembalikan', [LoanController::class, 'kembalikan'])
         return 'Informasi Admin Perpustakaan';
     });
 });
+Route::resource('loans', \App\Http\Controllers\LoanController::class);
+Route::post('loans/{id}/kembalikan', [\App\Http\Controllers\LoanController::class, 'kembalikan'])->name('loans.kembalikan');

@@ -14,4 +14,30 @@
         <tr><th>Alamat</th><td>{{ $member['alamat'] }}</td></tr>
         <tr><th>Status</th><td>{{ ucfirst($member['status']) }}</td></tr>
     </table>
+
+    <h2>Riwayat Peminjaman</h2>
+    @if ($member['loans']->isEmpty())
+        <p>Anggota ini belum pernah meminjam buku.</p>
+    @else
+        <table>
+            <thead>
+                <tr><th>Tgl Pinjam</th><th>Tgl Kembali</th><th>Petugas</th><th>Buku</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+                @foreach ($member['loans'] as $loan)
+                    <tr>
+                        <td>{{ $loan['tanggal_pinjam'] }}</td>
+                        <td>{{ $loan['tanggal_kembali'] }}</td>
+                        <td>{{ $loan['user']['name'] }}</td>
+                        <td>
+                            @foreach ($loan['loanItems'] as $item)
+                                {{ $item['book']['judul'] }}@if (! $loop->last), @endif
+                            @endforeach
+                        </td>
+                        <td>{{ ucfirst($loan['status']) }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
 @endsection
