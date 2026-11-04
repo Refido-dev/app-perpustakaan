@@ -1,0 +1,17 @@
+# Dokumentasi API Perpustakaan Digital Kampus
+
+Base URL: `http://127.0.0.1:8000/api` | Header: `Accept: application/json`. Contoh response diambil dari hasil uji curl (dipotong 350 karakter).
+
+| Method | URL | Body | Status Sukses | Status Gagal | Contoh Response |
+|---|---|---|---|---|---|
+| GET | `/api/books` | - | 200 | - | `{"data":[{"id":1,"judul":"elvan takut istri","penulis":"Elvan","penerbit":"Istri Elvan","tahun_terbit":2026,"isbn":null,"stok":300,"sampul":null,"category":{"id":1,"nama_kategori":"Horor"},"created_at":"2026-11-04T01:33:47.000000Z","updated_at":"2026-11-04T01:33:47.000000Z"},{"id":2,"judul":"RIllo","penulis":"Rillooo","penerbit":"PT PENTOL KOREA","` |
+| POST | `/api/books` | JSON buku | 201 | 422 | `{"data":{"id":3,"judul":"Buku Uji API","penulis":"Tester","penerbit":"Penerbit Uji","tahun_terbit":2020,"isbn":null,"stok":3,"sampul":null,"category":{"id":1,"nama_kategori":"Horor"},"created_at":"2026-11-04T05:06:29.000000Z","updated_at":"2026-11-04T05:06:29.000000Z"}}` |
+| GET | `/api/books/{id}` | - | 200 | 404 | `{"data":{"id":3,"judul":"Buku Uji API","penulis":"Tester","penerbit":"Penerbit Uji","tahun_terbit":2020,"isbn":null,"stok":3,"sampul":null,"category":{"id":1,"nama_kategori":"Horor"},"created_at":"2026-11-04T05:06:29.000000Z","updated_at":"2026-11-04T05:06:29.000000Z"}}` |
+| PUT | `/api/books/{id}` | JSON buku | 200 | 404 / 422 | `{"data":{"id":3,"judul":"Buku Uji API Edit","penulis":"Tester","penerbit":"Penerbit Uji","tahun_terbit":2021,"isbn":null,"stok":5,"sampul":null,"category":{"id":1,"nama_kategori":"Horor"},"created_at":"2026-11-04T05:06:29.000000Z","updated_at":"2026-11-04T05:06:29.000000Z"}}` |
+| DELETE | `/api/books/{id}` | - | 200 | 404 | `{"message":"Buku berhasil dihapus."}` |
+| GET | `/api/members` | - | 200 | - | `{"data":[{"id":1,"nama":"Budi Santoso","nim":"3125500010","email":"anggota0@mail.com","nomor_telepon":"081234561000","alamat":"Surabaya","status":"aktif","created_at":"2026-11-04T04:05:16.000000Z","updated_at":"2026-11-04T04:05:16.000000Z"},{"id":2,"nama":"Siti Aminah","nim":"3125500011","email":"anggota1@mail.com","nomor_telepon":"081234561001","a` |
+| GET | `/api/members/{id}` | - | 200 | 404 | `{"data":{"id":1,"nama":"Budi Santoso","nim":"3125500010","email":"anggota0@mail.com","nomor_telepon":"081234561000","alamat":"Surabaya","status":"aktif","created_at":"2026-11-04T04:05:16.000000Z","updated_at":"2026-11-04T04:05:16.000000Z"}}` |
+| GET | `/api/loans` | - | 200 | - | `{"data":[],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/loans?page=1","last":"http:\/\/127.0.0.1:8000\/api\/loans?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/loans?page=1","label":"1","page":1,` |
+| POST | `/api/loans` | JSON peminjaman | 201 | 422 | `{"data":{"id":2,"member":{"id":1,"nama":"Budi Santoso"},"petugas":{"id":1,"name":"Admin Perpus"},"tanggal_pinjam":"2026-11-04","tanggal_kembali":"2026-11-11","tanggal_dikembalikan":null,"status":"dipinjam","books":[{"id":3,"judul":"Buku Uji API Edit"}]}}` |
+| PUT | `/api/loans/{id}/kembalikan` | - | 200 | 404 | `{"data":{"id":2,"member":{"id":1,"nama":"Budi Santoso"},"petugas":{"id":1,"name":"Admin Perpus"},"tanggal_pinjam":"2026-11-04","tanggal_kembali":"2026-11-11","tanggal_dikembalikan":"2026-11-04","status":"dikembalikan","books":[{"id":3,"judul":"Buku Uji API Edit"}]}}` |
+| GET | `/api/stats` | - | 200 | - | `{"total_buku":3,"total_anggota":10,"peminjaman_aktif":1}` |
